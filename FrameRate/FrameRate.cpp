@@ -208,6 +208,7 @@ namespace WPEFramework
         
 	uint32_t FrameRate::setFrmMode(const JsonObject& parameters, JsonObject& response)
         {
+            returnResponse(true);
             std::lock_guard<std::mutex> guard(m_callMutex);
 
             LOGINFOMETHOD();
